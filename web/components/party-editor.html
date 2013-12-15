@@ -1,0 +1,17 @@
+<polymer-element name="party-editor">
+  <link rel="import" href="party-list.html">
+  <template>
+    <div class="row">
+      <div class="col-md-4 party-list">
+        <h2>Parties</h2>
+        <party-list parties="{{parties}}"  on-selected-party-change="{{selectedPartyChange}}"></party-list>
+       </div>
+      <div class="col-md-8 party-view">
+        <template if="{{ selectedPartyId }}">
+          Party selected: {{selectedPartyId}}
+        </template>
+      </div>
+    </div>
+  </template>
+  <script type="application/dart" src="party-editor.dart"></script>
+</polymer-element>

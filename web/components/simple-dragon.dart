@@ -1,11 +1,11 @@
 import 'package:polymer/polymer.dart';
 import 'package:route_hierarchical/client.dart';
 
-final Router ROUTER = new Router();
 
 @CustomTag('simple-dragon')
 class SimpleDragon extends PolymerElement {
-  
+  final Router ROUTER = new Router();
+
   SimpleDragon.created() : super.created() {
     ROUTER.root
       ..addRoute(
@@ -20,6 +20,6 @@ class SimpleDragon extends PolymerElement {
                   path: '/:partyId',
                   enter: (_) => print('/party')));
     ROUTER.listen();
-    ROUTER.go('partiesList', { 'partyId': 'gowanus'});
+    ROUTER.go('partiesList', {});
   }
 }

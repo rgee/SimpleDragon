@@ -2,17 +2,15 @@ import 'package:polymer/polymer.dart';
 import '../models/party.dart';
 import 'dart:html';
 
-import 'simple-dragon.dart';
-
 @CustomTag('party-list')
 class PartyList extends PolymerElement {
+  @published String selectedPartyId;
   @published List<Party> parties;
   
-  PartyList.created() : super.created() {
-    parties = [new Party("Gowanus Raiders")];
-  }
+  PartyList.created() : super.created();
   
-  void showParty(Event e, var detail, Node target) {
-    ROUTER.go('partiesList.party', { 'partyId': 'gowanus' });
+  void changeSelected(Event e, var details, Node target) {
+    String partyId = (target as Element).getAttribute('party-id');
+    dispatchEvent(new CustomEvent('selected-party-change', detail: { 'party-id': partyId } ));
   }
 }
