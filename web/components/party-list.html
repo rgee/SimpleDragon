@@ -1,0 +1,13 @@
+<polymer-element name="party-list">
+  <template>
+    <ul class="parties">
+      <template repeat="{{ party in parties }}">
+        <li class="party">{{party.name}}</li> 
+      </template>
+      <template if="{{parties.isEmpty}}">
+        There are no parties!
+      </template>
+    </ul>
+  </template>
+  <script type="application/dart" src="party-list.dart"></script>
+</polymer-element>
