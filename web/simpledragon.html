@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SimpleDragon</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.css">
+    <link rel="import" href="packages/widget/components/collapse.html">
+    <link rel="import" href="packages/widget/components/accordion.html">
+    <script type="application/dart">export 'package:polymer/init.dart';</script>
+    
+  </head>
+  <body>
+    <h1>SimpleDragon</h1>
+    <accordion-widget>
+      <collapse-widget>
+        <div class="panel-heading">
+          <h4 class="panel-title"><a data-toggle="collapse">Item 1</a></h4>
+        </div>
+        <p>Item 1 content</p>
+      </collapse-widget>
+      <collapse-widget>
+        <div class="panel-heading">
+          <h4 class="panel-title"><a data-toggle="collapse">Item 2</a></h4>
+        </div>
+        <p>Item 2 content</p>
+      </collapse-widget>
+    </accordion-widget>
+    
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>

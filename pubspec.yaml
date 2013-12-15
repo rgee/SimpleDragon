@@ -1,0 +1,8 @@
+name: SimpleDragon
+description: A sample web application
+dependencies:
+  browser: any
+  widget:
+    git:
+      ref: master
+      url: https://github.com/dart-lang/widget.dart.git
