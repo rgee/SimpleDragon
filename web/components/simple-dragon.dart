@@ -10,8 +10,15 @@ class SimpleDragon extends PolymerElement {
       ..addRoute(
           name: 'partiesList',
           path: '/parties',
-          defaultRoute: true);
+          defaultRoute: true,
+          enter: (_) => print("/parties"),
+          mount: (Route router) =>
+            router
+              ..addRoute(
+                  name: 'party',
+                  path: '/:partyId',
+                  enter: (_) => print('/party')));
     _router.listen();
-    _router.go('partiesList', {});
+    _router.go('partiesList.party', { 'partyId': 'gowanus'});
   }
 }
