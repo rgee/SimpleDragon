@@ -2,33 +2,25 @@
 
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>SimpleDragon</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
-    
-    <link rel="import" href="packages/widget/components/collapse.html">
-    <link rel="import" href="packages/widget/components/accordion.html">
+    <link rel="stylesheet" href="simpledragon.css">
     <script type="application/dart">export 'package:polymer/init.dart';</script>
     
   </head>
   <body>
-    <h1>SimpleDragon</h1>
-    <accordion-widget>
-      <collapse-widget>
-        <div class="panel-heading">
-          <h4 class="panel-title"><a data-toggle="collapse">Item 1</a></h4>
+    <div class="container" id="main-container">
+      <div class="row">
+        <div class="col-md-4 party-list">
+          <h2>Parties</h2>
         </div>
-        <p>Item 1 content</p>
-      </collapse-widget>
-      <collapse-widget>
-        <div class="panel-heading">
-          <h4 class="panel-title"><a data-toggle="collapse">Item 2</a></h4>
+        <div class="col-md-8 party-view">
         </div>
-        <p>Item 2 content</p>
-      </collapse-widget>
-    </accordion-widget>
-    
+      </div>
+    </div>    
     <script src="packages/browser/dart.js"></script>
   </body>
 </html>
