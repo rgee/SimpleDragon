@@ -1,5 +1,6 @@
-<polymer-element name="party-editor">
+<polymer-element name="party-editor" apply-author-styles>
   <link rel="import" href="party-list.html">
+  <link rel="import" href="party-view.html">
   <template>
     <div class="row">
       <div class="col-md-4 party-list">
@@ -7,8 +8,11 @@
         <party-list parties="{{parties}}"  on-selected-party-change="{{selectedPartyChange}}"></party-list>
        </div>
       <div class="col-md-8 party-view">
-        <template if="{{ selectedPartyId }}">
-          Party selected: {{selectedPartyId}}
+        <template if="{{selectedPartyId != null}}">
+          <party-view partyId="{{selectedPartyId}}"></party-view>
+        </template>
+        <template if="{{selectedPartyId == null}}">
+          Please select a party.
         </template>
       </div>
     </div>
