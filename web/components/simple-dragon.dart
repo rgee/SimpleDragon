@@ -5,8 +5,11 @@ import 'package:route_hierarchical/client.dart';
 @CustomTag('simple-dragon')
 class SimpleDragon extends PolymerElement {
   final Router ROUTER = new Router();
-
+  
+  bool get applyAuthorStyles => true;
+  
   SimpleDragon.created() : super.created() {
+    
     ROUTER.root
       ..addRoute(
           name: 'partiesList',

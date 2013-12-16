@@ -7,6 +7,8 @@ class PartyList extends PolymerElement {
   @published String selectedPartyId;
   @published List<Party> parties;
   
+  bool get applyAuthorStyles => true;
+  
   PartyList.created() : super.created();
   
   void changeSelected(Event e, var details, Node target) {

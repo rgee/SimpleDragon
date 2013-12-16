@@ -8,6 +8,8 @@ class PartyEditor extends PolymerElement {
   
   @observable List<Party> parties;
   
+  bool get applyAuthorStyles => true;
+  
   PartyEditor.created() : super.created() {
     parties = [new Party("Gowanus Raiders")];  
   }
